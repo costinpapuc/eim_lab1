@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    final private static long TRANSPARENCY_EFFECT_DURATION = 5000;
+    private static final long TRANSPARENCY_EFFECT_DURATION = 5000;
 
     private ButtonClickListener buttonClickListener = new ButtonClickListener();
 
@@ -24,10 +24,8 @@ public class MainActivity extends AppCompatActivity {
             EditText userNameEditText = (EditText)findViewById(R.id.user_name_edit_text);
             TextView greetingTextView = (TextView)findViewById(R.id.greeting_text_view);
             greetingTextView.setAlpha(1);
-
-            // TODO: exercise 9a
             greetingTextView.setText("Welcome to the EIM laboratory,\n" + userNameEditText.getText());
-            // TODO: exercise 9b
+
             AlphaAnimation fadeEffect = new AlphaAnimation(1.0f, 0.0f);
             fadeEffect.setDuration(TRANSPARENCY_EFFECT_DURATION);
             fadeEffect.setFillAfter(true);
